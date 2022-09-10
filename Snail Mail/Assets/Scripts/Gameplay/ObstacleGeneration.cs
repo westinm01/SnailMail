@@ -6,6 +6,7 @@ public class ObstacleGeneration : MonoBehaviour
 {
     public List <GameObject> obstacles = new List<GameObject>();
     public float generationTimer = 6f;
+    public bool generateOnStart = false;
     private float generationTimePassed = 0f;
 
     private int numOfObstacles = 0;
@@ -13,6 +14,10 @@ public class ObstacleGeneration : MonoBehaviour
     void Start()
     {
         numOfObstacles = obstacles.Count;
+        if (generateOnStart)
+        {
+            GenerateObstacle();
+        }
     }
 
     // Update is called once per frame
@@ -21,12 +26,18 @@ public class ObstacleGeneration : MonoBehaviour
         generationTimePassed += Time.deltaTime;
         if (generationTimePassed >= generationTimer)
         {
-            int rando = Random.Range(0, numOfObstacles);
-            GameObject newObstacle = Instantiate(obstacles[rando], this.transform, false);
-            float randomY = Random.Range(-3f, 3f);
-            newObstacle.transform.position = new Vector3(19.0f, randomY, 5f);
+            GenerateObstacle();
             generationTimePassed = 0f;
-            Destroy(newObstacle, 25f);
         }
+    }
+
+    public void GenerateObstacle()
+    {
+        int rando = Random.Range(0, numOfObstacles);
+        GameObject newObstacle = Instantiate(obstacles[rando], this.transform, false);
+        float randomY = Random.Range(-3f, 3f);
+        newObstacle.transform.position = new Vector3(19.0f, randomY, 5f);
+        
+        Destroy(newObstacle, 25f);
     }
 }
