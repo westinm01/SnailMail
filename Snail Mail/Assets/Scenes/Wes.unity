@@ -364,7 +364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &648526083
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -527,6 +527,7 @@ GameObject:
   - component: {fileID: 1730430557}
   - component: {fileID: 1730430558}
   - component: {fileID: 1730430559}
+  - component: {fileID: 1730430560}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -585,3 +586,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollSpeed: 2
+--- !u!114 &1730430560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730430556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a46ad03d502ed64e80729dcd2048d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 10
+  backgroundObject: {fileID: 702766786}
