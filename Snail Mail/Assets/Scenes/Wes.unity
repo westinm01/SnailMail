@@ -220,6 +220,7 @@ GameObject:
   - component: {fileID: 590964770}
   - component: {fileID: 590964769}
   - component: {fileID: 590964773}
+  - component: {fileID: 590964774}
   m_Layer: 0
   m_Name: Snail
   m_TagString: Untagged
@@ -242,7 +243,7 @@ MonoBehaviour:
   runSpeed: 5
   leftBound: -8
   rightBound: 8
-  topBound: 4
+  topBound: 3.5
   bottomBound: -4
 --- !u!70 &590964770
 CapsuleCollider2D:
@@ -348,6 +349,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &590964774
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590964768}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d74ceffde0ccd54196427f4291b3cb8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &648526082
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,5 +619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a46ad03d502ed64e80729dcd2048d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 9.5
+  startOffset: 9.4
   backgroundObject: {fileID: 702766786}
