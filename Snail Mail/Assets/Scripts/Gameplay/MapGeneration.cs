@@ -23,6 +23,7 @@ public class MapGeneration : MonoBehaviour
         {   GameObject newMap = Instantiate(backgroundObject, this.transform, false);
             newMap.transform.position = new Vector3(19.0f, 0, 10);
             timePassed = 0;
+            Destroy(newMap, 25f);
         }
     }
 }
