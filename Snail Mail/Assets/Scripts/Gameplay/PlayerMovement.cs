@@ -10,6 +10,10 @@ public class PlayerMovement : MonoBehaviour
     float vertical;
 
     public float runSpeed = 20.0f;
+    private bool isSlowed = false;
+    private float baseRunSpeed;
+    private float slowDuration;
+    private float slowTimePassed;
     //private Animator anim;
     
     public float leftBound = -8;
@@ -19,19 +23,31 @@ public class PlayerMovement : MonoBehaviour
 
     private MapScroll scroller;
 
+    
+
     void Start ()
     {
-    body = GetComponent<Rigidbody2D>();
-    //anim = GetComponent<Animator>();
-    scroller = FindObjectOfType<MapScroll>();
+        baseRunSpeed = runSpeed;
+        body = GetComponent<Rigidbody2D>();
+        //anim = GetComponent<Animator>();
+        scroller = FindObjectOfType<MapScroll>();
     
     }
 
     void Update()
     {
-    // Gives a value between -1 and 1
-    horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
-    vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        // Gives a value between -1 and 1
+        horizontal = Input.GetAxisRaw("Horizontal"); // -1 is left
+        vertical = Input.GetAxisRaw("Vertical"); // -1 is down
+        if (isSlowed)
+        {
+            slowTimePassed += Time.deltaTime;
+            if (slowTimePassed >= slowDuration)
+            {
+                runSpeed = baseRunSpeed;
+                isSlowed = false;
+            }
+        }
     }
 
     void FixedUpdate()
@@ -92,6 +108,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+
     void Move(){
         if (horizontal != 0 && vertical != 0) // Check for diagonal movement and slow it
         {
@@ -107,6 +124,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void SlowDown(float modifier, float duration)
+    {
+        runSpeed *= modifier;
+        slowDuration = duration;
+        slowTimePassed = 0;
+        isSlowed = true;
+    }
+
+
     bool InXBounds()
     {
         return this.transform.position.x < rightBound && this.transform.position.y > leftBound;
@@ -116,4 +142,5 @@ public class PlayerMovement : MonoBehaviour
     {
         return this.transform.position.y < topBound && this.transform.position.y > bottomBound;
     }
+    
 }
