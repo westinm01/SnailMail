@@ -598,5 +598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a46ad03d502ed64e80729dcd2048d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 10
+  timer: 9.5
+  startOffset: 9.4
   backgroundObject: {fileID: 702766786}
