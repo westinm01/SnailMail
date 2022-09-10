@@ -36,4 +36,9 @@ public class PlayerHealth : MonoBehaviour
             healthIndicators[i].SetActive(true);
         }
     }
+    
+    public void SetPlayerInvincible(bool value)
+    {
+        invincible = value;
+    }
 }
