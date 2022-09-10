@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private MapScroll scroller;
 
-    
+    bool movementLocked;
 
     void Start ()
     {
@@ -110,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
 
 
     void Move(){
+        if (movementLocked)
+        {
+            body.velocity = new Vector2(-1 * scroller.scrollSpeed, 0);
+            return;
+        }
         if (horizontal != 0 && vertical != 0) // Check for diagonal movement and slow it
         {
             body.velocity = new Vector2(horizontal * runSpeed * 0.7f, vertical * runSpeed * 0.7f); 
@@ -141,6 +146,11 @@ public class PlayerMovement : MonoBehaviour
     bool InYBounds()
     {
         return this.transform.position.y < topBound && this.transform.position.y > bottomBound;
+    }
+
+    public void LockMovement(bool value)
+    {
+        movementLocked = value;
     }
     
 }
