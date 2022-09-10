@@ -7,6 +7,15 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
 
+    private void Awake()
+    {
+        Singleton[] singletons = FindObjectsOfType<Singleton>();
+        foreach(Singleton s in singletons)
+        {
+            Destroy(s);
+        }
+    }
+
     private void Start()
     {
         winScreen.SetActive(false);
