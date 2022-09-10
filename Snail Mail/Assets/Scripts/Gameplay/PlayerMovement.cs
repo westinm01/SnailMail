@@ -17,10 +17,13 @@ public class PlayerMovement : MonoBehaviour
     public float topBound = 4;
     public float bottomBound = -4;
 
+    private MapScroll scroller;
+
     void Start ()
     {
     body = GetComponent<Rigidbody2D>();
     //anim = GetComponent<Animator>();
+    scroller = FindObjectOfType<MapScroll>();
     
     }
 
@@ -43,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
         */
-        Debug.Log(horizontal + ", " + vertical);
+        //Debug.Log(horizontal + ", " + vertical);
         if (this.transform.position.x < rightBound && this.transform.position.x > leftBound && this.transform.position.y < topBound && this.transform.position.y > bottomBound)
         {
             Move();
@@ -83,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             Move();
         }
         else{
-            body.velocity = new Vector2(0,0);//get background move velocity?
+            body.velocity = new Vector2(-1 * scroller.scrollSpeed, 0);
         }
         
 
@@ -94,6 +97,10 @@ public class PlayerMovement : MonoBehaviour
         {
             body.velocity = new Vector2(horizontal * runSpeed * 0.7f, vertical * runSpeed * 0.7f); 
         } 
+        //else if not moving at all
+        else if(horizontal == 0 && vertical == 0){
+            body.velocity = new Vector2(-1 * scroller.scrollSpeed, 0);
+        }
         else
         {
             body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
