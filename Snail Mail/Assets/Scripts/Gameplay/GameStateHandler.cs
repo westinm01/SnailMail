@@ -7,15 +7,27 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void WinGame()
     {
-        
+        winScreen.SetActive(true);
+        PauseGameSystems();
+    }
+
+    public void LoseGame()
+    {
+        loseScreen.SetActive(true);
+        PauseGameSystems();
+    }
+
+    public void PauseGameSystems()
+    {
+        Time.timeScale = 0f;
+        FindObjectOfType<PlayerMovement>().enabled = false;
     }
 }
