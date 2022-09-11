@@ -7,6 +7,9 @@ public class Rocks : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        col.GetComponent<PlayerHealth>().TakeDamage();
+        if(col.tag == "Player")
+        {
+            col.GetComponent<PlayerHealth>().TakeDamage();
+        }
     }
 }
