@@ -5,8 +5,8 @@ using UnityEngine;
 public class AttackSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] attackPrefabs;
+    [SerializeField] float timeBetweenAttacks = 8f;
 
-    float timeBetweenAttacks = 8f;
     float timeElapsed = 0f;
     System.Random random;
 
