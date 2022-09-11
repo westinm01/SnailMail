@@ -42,7 +42,7 @@ public class ObstacleGeneration : MonoBehaviour
         int rando = Random.Range(0, numOfObstacles);
         GameObject newObstacle = Instantiate(obstacles[rando], this.transform, false);
         float randomY = Random.Range(-3f, 3f);
-        newObstacle.transform.position = new Vector3(19.0f, randomY, 5f);
+        newObstacle.transform.position = new Vector3(19.0f, randomY, newObstacle.transform.position.z);
         
         Destroy(newObstacle, 25f);
     }
