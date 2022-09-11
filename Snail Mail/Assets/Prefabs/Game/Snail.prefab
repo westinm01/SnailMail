@@ -183,6 +183,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  invincibleTime: 3
 --- !u!114 &7301865975072918846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,7 +210,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 20451d1fa986ee841ac6958eac78c78f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.14
   m_Pitch: 1
   Loop: 0
   Mute: 0
