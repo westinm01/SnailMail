@@ -1257,26 +1257,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7675892514292877984, guid: 9e9e28a3852c13741ab1d496da5e4fbe, type: 3}
-      propertyPath: attackPrefabs.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 7675892514292877984, guid: 9e9e28a3852c13741ab1d496da5e4fbe, type: 3}
-      propertyPath: attackPrefabs.Array.data[9]
-      value: 
-      objectReference: {fileID: 6547730250052267910, guid: f758be22f5305654c960c40520092157, type: 3}
-    - target: {fileID: 7675892514292877984, guid: 9e9e28a3852c13741ab1d496da5e4fbe, type: 3}
-      propertyPath: attackPrefabs.Array.data[10]
-      value: 
-      objectReference: {fileID: 2759597545111047750, guid: dda77f0e0d0af6d4aaad2ccf8ab535f3, type: 3}
-    - target: {fileID: 7675892514292877984, guid: 9e9e28a3852c13741ab1d496da5e4fbe, type: 3}
-      propertyPath: attackPrefabs.Array.data[11]
-      value: 
-      objectReference: {fileID: 226911859932781529, guid: c73b1c3a4da515a42a2d6463bc2d91e0, type: 3}
-    - target: {fileID: 7675892514292877984, guid: 9e9e28a3852c13741ab1d496da5e4fbe, type: 3}
-      propertyPath: attackPrefabs.Array.data[12]
-      value: 
-      objectReference: {fileID: 8145477924414422455, guid: 9aa8c1e7cee3e824ca8df76810b7ee9c, type: 3}
     - target: {fileID: 7675892514292877985, guid: 9e9e28a3852c13741ab1d496da5e4fbe, type: 3}
       propertyPath: m_RootOrder
       value: 5
