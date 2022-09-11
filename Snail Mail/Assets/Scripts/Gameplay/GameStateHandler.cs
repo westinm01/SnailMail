@@ -18,17 +18,14 @@ public class GameStateHandler : MonoBehaviour
     bool winning = false;
     bool losing = false;
 
-    private void Awake()
-    {
-        Singleton[] singletons = FindObjectsOfType<Singleton>();
-        foreach(Singleton s in singletons)
-        {
-            Destroy(s);
-        }
-    }
-
     private void Start()
     {
+        Singleton[] singletons = FindObjectsOfType<Singleton>();
+        foreach (Singleton s in singletons)
+        {
+            Destroy(s.gameObject);
+        }
+
         winScreen.SetActive(false);
         loseScreen.SetActive(false);
         fadeToBlack.SetActive(false);
