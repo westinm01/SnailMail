@@ -13,6 +13,7 @@ public class Castle : MonoBehaviour
         {
             col.GetComponent<PlayerMovement>().SlowDown(slowModifier, duration);
             GetComponent<AudioSource>().Play();
+            FindObjectOfType<CinemachineShake>().ShakeCamera(.5f, .35f, duration);
         }
     }
 }

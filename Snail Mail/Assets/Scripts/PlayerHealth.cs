@@ -17,11 +17,14 @@ public class PlayerHealth : MonoBehaviour
     {
         if (invincible)
         {
+            FindObjectOfType<CinemachineShake>().ShakeCamera(1f, .25f, .75f);
             return;
         }
 
         // take damage
         currentHealth--;
+        FindObjectOfType<CinemachineShake>().ShakeCamera(2.5f, .25f, .75f);
+
         GetComponent<AudioSource>().Play();
         if (currentHealth <= 0)
         {
