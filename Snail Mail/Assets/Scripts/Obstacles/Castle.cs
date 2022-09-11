@@ -9,6 +9,9 @@ public class Castle : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        col.GetComponent<PlayerMovement>().SlowDown(slowModifier, duration);
+        if(col.tag == "Player")
+        {
+            col.GetComponent<PlayerMovement>().SlowDown(slowModifier, duration);
+        }
     }
 }

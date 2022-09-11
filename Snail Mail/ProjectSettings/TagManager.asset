@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Snail
+    uniqueID: 39881261
+    locked: 0
+  - name: Attack
+    uniqueID: 2211165659
+    locked: 0
+  - name: Crab
+    uniqueID: 1979036507
+    locked: 0
