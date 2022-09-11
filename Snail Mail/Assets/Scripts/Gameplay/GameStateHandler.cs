@@ -10,6 +10,7 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] AudioClip winSFX;
     [SerializeField] GameObject loseScreen;
     [SerializeField] AudioClip loseSFX;
+    [SerializeField] AudioClip snatchSFX;
     [SerializeField] GameObject fadeToBlack;
     [SerializeField] GameObject fadeToRed;
 
@@ -79,6 +80,7 @@ public class GameStateHandler : MonoBehaviour
         yield return new WaitForSeconds(dramaticPauseDelay);
 
         loseScreen.SetActive(true);
+        AudioSource.PlayClipAtPoint(snatchSFX, Camera.main.transform.position);
         PauseGameSystems();
     }
     private void ManuallyDisableGameSystems()

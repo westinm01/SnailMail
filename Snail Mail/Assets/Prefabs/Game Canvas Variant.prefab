@@ -420,7 +420,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dramaticPauseDelay: 3
   winScreen: {fileID: 1783795436}
+  winSFX: {fileID: 8300000, guid: f022d16f45e30904380562f22f1af227, type: 3}
   loseScreen: {fileID: 1965969903}
+  loseSFX: {fileID: 8300000, guid: a9fcf5e273fbcec4eaf12d9f02f654cf, type: 3}
+  snatchSFX: {fileID: 8300000, guid: 79d055606d3f5fa408d852b7ff5d2cff, type: 3}
   fadeToBlack: {fileID: 1290210293}
   fadeToRed: {fileID: 3168765555993169053}
   objectsToDisable: []
