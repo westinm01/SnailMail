@@ -10,6 +10,8 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] GameObject loseScreen;
 
     [SerializeField] GameObject[] objectsToDisable;
+    bool winning = false;
+    bool losing = false;
 
     private void Awake()
     {
@@ -28,12 +30,18 @@ public class GameStateHandler : MonoBehaviour
 
     public void WinGame()
     {
-        StartCoroutine(DramaticWin());
+        if(!winning && !losing)
+        {
+            StartCoroutine(DramaticWin());
+        }
     }
 
     public void LoseGame()
     {
-        StartCoroutine(DramaticLose());
+        if(!winning && !losing)
+        {
+            StartCoroutine(DramaticLose());
+        }
     }
 
     public void PauseGameSystems()
@@ -43,12 +51,18 @@ public class GameStateHandler : MonoBehaviour
 
     IEnumerator DramaticWin()
     {
+        winning = true;
+        ManuallyDisableGameSystems();
+        FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
+
         yield return new WaitForSeconds(dramaticPauseDelay);
+
         winScreen.SetActive(true);
         PauseGameSystems();
     }
     IEnumerator DramaticLose()
     {
+        losing = true;
         ManuallyDisableGameSystems();
         FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
 
@@ -59,18 +73,25 @@ public class GameStateHandler : MonoBehaviour
     }
     private void ManuallyDisableGameSystems()
     {
+        FindObjectOfType<AttackSpawner>().enabled = false;
         FindObjectOfType<PlayerMovement>().enabled = false;
         FindObjectOfType<SandCastle>().enabled = false;
-
         FindObjectOfType<ObstacleGeneration>().enabled = false;
         FindObjectOfType<MapScroll>().enabled = false;
         FindObjectOfType<MapGeneration>().enabled = false;
 
+        foreach(BulletDelays b in FindObjectsOfType<BulletDelays>())
+        {
+            b.enabled = false;
+        }
+        foreach(AutoDestroy ad in FindObjectsOfType<AutoDestroy>())
+        {
+            ad.enabled = false;
+        }
         foreach(GameObject g in objectsToDisable)
         {
             g.SetActive(false);
         }
-        FindObjectOfType<AttackSpawner>().enabled = false;
         foreach(Rigidbody2D rb in FindObjectsOfType<Rigidbody2D>())
         {
             rb.freezeRotation = true;
