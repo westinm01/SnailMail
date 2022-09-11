@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7669460534715281568}
   - component: {fileID: 4413669512339405737}
   - component: {fileID: 9161959272808263646}
+  - component: {fileID: 6350094394061898513}
   m_Layer: 0
   m_Name: B4 Body
   m_TagString: Untagged
@@ -101,6 +102,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.51
+--- !u!114 &6350094394061898513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3087831887241267392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc36e8412a0c0942a9cb2eae08a8fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4130864100348464906
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +123,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2063825344026669225}
-  - component: {fileID: -2810422373768269782}
   m_Layer: 0
   m_Name: Bullet 4
   m_TagString: Untagged
@@ -134,15 +146,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2810422373768269782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4130864100348464906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc36e8412a0c0942a9cb2eae08a8fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
