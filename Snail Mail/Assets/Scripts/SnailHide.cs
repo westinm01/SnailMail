@@ -7,7 +7,7 @@ public class SnailHide : MonoBehaviour
     [SerializeField] KeyCode hideKey;
 
     // private vars
-    bool hiding = false;
+    public bool hiding = false;
 
     // cached referenced
     PlayerHealth playerHealth;
@@ -40,5 +40,9 @@ public class SnailHide : MonoBehaviour
             //movement.enabled = true;
             movement.LockMovement(false);
         }
+    }
+
+    public bool GetHiding(){
+        return hiding;
     }
 }
