@@ -8,6 +8,7 @@ public class GameStateHandler : MonoBehaviour
 
     [SerializeField] GameObject winScreen;
     [SerializeField] GameObject loseScreen;
+    [SerializeField] GameObject fadeToBlack;
 
     [SerializeField] GameObject[] objectsToDisable;
     bool winning = false;
@@ -26,6 +27,7 @@ public class GameStateHandler : MonoBehaviour
     {
         winScreen.SetActive(false);
         loseScreen.SetActive(false);
+        fadeToBlack.SetActive(false);
     }
 
     public void WinGame()
@@ -54,6 +56,7 @@ public class GameStateHandler : MonoBehaviour
         winning = true;
         ManuallyDisableGameSystems();
         FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
+        fadeToBlack.SetActive(true);
 
         yield return new WaitForSeconds(dramaticPauseDelay);
 
