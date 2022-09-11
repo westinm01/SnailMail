@@ -868,6 +868,10 @@ PrefabInstance:
       propertyPath: healthIndicators.Array.data[2]
       value: 
       objectReference: {fileID: 2106314488}
+    - target: {fileID: 7301865975072918837, guid: 85d1430cad01cf048a1c10fdc6464e9a, type: 3}
+      propertyPath: bottomBound
+      value: -3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7301865975072918838, guid: 85d1430cad01cf048a1c10fdc6464e9a, type: 3}
       propertyPath: m_Name
       value: Snail

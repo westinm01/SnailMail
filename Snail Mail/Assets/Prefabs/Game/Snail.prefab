@@ -123,7 +123,7 @@ MonoBehaviour:
   leftBound: -8
   rightBound: 8
   topBound: 3.5
-  bottomBound: -4
+  bottomBound: -3.5
 --- !u!50 &7301865975072918836
 Rigidbody2D:
   serializedVersion: 4
@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideKey: 32
+  hiding: 0
 --- !u!82 &38706419
 AudioSource:
   m_ObjectHideFlags: 0
