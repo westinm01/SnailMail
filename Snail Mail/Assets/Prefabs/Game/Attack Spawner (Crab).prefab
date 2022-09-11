@@ -103,4 +103,6 @@ MonoBehaviour:
   - {fileID: 6805550815485732817, guid: a1c7e31a0a65a9c46938ea95d4880f02, type: 3}
   - {fileID: 4907411778658675940, guid: 1358fe2885a8751429fbab9943e2101a, type: 3}
   - {fileID: 7584739760709625294, guid: a04a5fa2c8513d34fa69565ce06b6088, type: 3}
-  timeBetweenAttacks: 8
+  - {fileID: 1035187064444019993, guid: 8668de954eeae2c47aa37d1475d9cf35, type: 3}
+  - {fileID: 3844776102248864664, guid: cfb5b8556a87eb747a2211ecfaab1a49, type: 3}
+  timeBetweenAttacks: 4
