@@ -12,6 +12,7 @@ public class Castle : MonoBehaviour
         if(col.tag == "Player")
         {
             col.GetComponent<PlayerMovement>().SlowDown(slowModifier, duration);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
