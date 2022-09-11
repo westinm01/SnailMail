@@ -108,6 +108,7 @@ MonoBehaviour:
   - {fileID: 1035187064444019993, guid: 8668de954eeae2c47aa37d1475d9cf35, type: 3}
   - {fileID: 3844776102248864664, guid: cfb5b8556a87eb747a2211ecfaab1a49, type: 3}
   - {fileID: 4942159510884796711, guid: 74c8e33cc47c1e2478760f6557f699a3, type: 3}
+  - {fileID: 5444440411138988474, guid: fc31fefd5a20e834f9a0a5945303e604, type: 3}
   timeBetweenAttacks: 4
 --- !u!95 &335480620
 Animator:
