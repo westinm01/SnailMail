@@ -8,19 +8,20 @@ public class VignetteTrigger : MonoBehaviour
     
     public PostProcessVolume volume;
     private Vignette vignette;
-    public GameObject player; 
+    private SnailHide s; 
     private float t;
     
     // Start is called before the first frame update
     void Start()
     {
         volume.profile.TryGetSettings(out vignette);
+        s = FindObjectOfType<SnailHide>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(player.GetComponent<SnailHide>().hiding)
+        if(s.hiding)
         {
             t += 2 * Time.deltaTime;
             

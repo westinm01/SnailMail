@@ -41,8 +41,4 @@ public class SnailHide : MonoBehaviour
             movement.LockMovement(false);
         }
     }
-
-    public bool GetHiding(){
-        return hiding;
-    }
 }
