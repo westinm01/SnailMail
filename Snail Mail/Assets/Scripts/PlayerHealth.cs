@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] Sprite fullHP;
+    [SerializeField] Sprite emptyHP;
+
     [SerializeField] GameObject[] healthIndicators;
     int currentHealth = 3;
     bool invincible = false;
@@ -30,11 +34,12 @@ public class PlayerHealth : MonoBehaviour
     {
         foreach (GameObject g in healthIndicators)
         {
-            g.SetActive(false);
+            g.GetComponent<Image>().sprite = emptyHP;
         }
         for (int i = 0; i < currentHealth; i++)
         {
             healthIndicators[i].SetActive(true);
+            healthIndicators[i].GetComponent<Image>().sprite = fullHP;
         }
     }
     
