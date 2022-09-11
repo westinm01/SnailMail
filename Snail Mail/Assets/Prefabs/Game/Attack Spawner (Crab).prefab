@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 7675892514292877987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 4, z: 1}
+  m_LocalScale: {x: 3, y: 8.719, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,4 +102,5 @@ MonoBehaviour:
   - {fileID: 1016303136685195286, guid: 2473ca92ab66e534a89e35513f6d5382, type: 3}
   - {fileID: 6805550815485732817, guid: a1c7e31a0a65a9c46938ea95d4880f02, type: 3}
   - {fileID: 4907411778658675940, guid: 1358fe2885a8751429fbab9943e2101a, type: 3}
+  - {fileID: 7584739760709625294, guid: a04a5fa2c8513d34fa69565ce06b6088, type: 3}
   timeBetweenAttacks: 8
