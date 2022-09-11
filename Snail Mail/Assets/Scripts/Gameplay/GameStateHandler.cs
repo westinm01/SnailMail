@@ -7,7 +7,9 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] float dramaticPauseDelay = 3f;
 
     [SerializeField] GameObject winScreen;
+    [SerializeField] AudioClip winSFX;
     [SerializeField] GameObject loseScreen;
+    [SerializeField] AudioClip loseSFX;
     [SerializeField] GameObject fadeToBlack;
     [SerializeField] GameObject fadeToRed;
 
@@ -58,6 +60,7 @@ public class GameStateHandler : MonoBehaviour
         winning = true;
         ManuallyDisableGameSystems();
         FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
+        AudioSource.PlayClipAtPoint(winSFX, Camera.main.transform.position);
         fadeToBlack.SetActive(true);
 
         yield return new WaitForSeconds(dramaticPauseDelay);
@@ -70,6 +73,7 @@ public class GameStateHandler : MonoBehaviour
         losing = true;
         ManuallyDisableGameSystems();
         FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
+        AudioSource.PlayClipAtPoint(loseSFX, Camera.main.transform.position);
         fadeToRed.SetActive(true);
 
         yield return new WaitForSeconds(dramaticPauseDelay);
