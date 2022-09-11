@@ -5,7 +5,9 @@ using UnityEngine;
 public class ObstacleGeneration : MonoBehaviour
 {
     public List <GameObject> obstacles = new List<GameObject>();
-    public float generationTimer = 6f;
+    public float generationTimerMin = 2f;
+    public float generationTimerMax = 6f;
+    private float generationTimer = 6f;
     public bool generateOnStart = false;
     private float generationTimePassed = 0f;
 
@@ -23,6 +25,10 @@ public class ObstacleGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(generationTimePassed == 0f)
+        {
+            generationTimer = Random.Range(generationTimerMin, generationTimerMax);
+        }
         generationTimePassed += Time.deltaTime;
         if (generationTimePassed >= generationTimer)
         {

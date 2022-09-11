@@ -525,7 +525,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590964768}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a26909f855ab55a4cb9575e18ec448f4, type: 3}
   m_Name: 
@@ -730,7 +730,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1054,7 +1054,8 @@ MonoBehaviour:
   - {fileID: 8210388342722177098, guid: c330653e1d5e8e7428c0f2aa58f159dd, type: 3}
   - {fileID: 232459619628077991, guid: 6083d2588b598e349afd12a41cd61169, type: 3}
   - {fileID: 7537002036388650579, guid: b7a47cd647f27e343b194bd0af934fbd, type: 3}
-  generationTimer: 5
+  generationTimerMin: 1
+  generationTimerMax: 6
   generateOnStart: 1
 --- !u!4 &1990744254 stripped
 Transform:
