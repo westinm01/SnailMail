@@ -30,6 +30,14 @@ public class AttackSpawner : MonoBehaviour
     private void Attack()
     {
         int randomAttack = random.Next(0, attackPrefabs.Length);
-        Instantiate(attackPrefabs[randomAttack], transform.position, Quaternion.identity);
+        Instantiate(attackPrefabs[randomAttack]);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            FindObjectOfType<GameStateHandler>().LoseGame();
+        }
     }
 }
