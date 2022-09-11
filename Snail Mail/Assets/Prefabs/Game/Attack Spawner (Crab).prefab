@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7675892514292877986
 SpriteRenderer:
@@ -100,4 +100,6 @@ MonoBehaviour:
   attackPrefabs:
   - {fileID: 7852483521620669556, guid: 1a0b56723ce9b0041ba1f66dcc858689, type: 3}
   - {fileID: 1016303136685195286, guid: 2473ca92ab66e534a89e35513f6d5382, type: 3}
+  - {fileID: 6805550815485732817, guid: a1c7e31a0a65a9c46938ea95d4880f02, type: 3}
+  - {fileID: 4907411778658675940, guid: 1358fe2885a8751429fbab9943e2101a, type: 3}
   timeBetweenAttacks: 8
