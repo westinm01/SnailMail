@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Wes New.unity
     guid: bcce8ad6a685d904e916bb37ea77f6ab
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: cf3baa182374ac044b54020e0981457a
   m_configObjects: {}
