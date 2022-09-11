@@ -9,6 +9,7 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] GameObject winScreen;
     [SerializeField] AudioClip winSFX;
     [SerializeField] GameObject loseScreen;
+    [SerializeField] Sprite koSprite;
     [SerializeField] AudioClip loseSFX;
     [SerializeField] AudioClip snatchSFX;
     [SerializeField] GameObject fadeToBlack;
@@ -17,6 +18,7 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] GameObject[] objectsToDisable;
     bool winning = false;
     bool losing = false;
+    GameObject player;
 
     private void Start()
     {
@@ -30,6 +32,7 @@ public class GameStateHandler : MonoBehaviour
         loseScreen.SetActive(false);
         fadeToBlack.SetActive(false);
         fadeToRed.SetActive(false);
+        player = FindObjectOfType<PlayerMovement>().gameObject;
     }
 
     public void WinGame()
@@ -69,6 +72,8 @@ public class GameStateHandler : MonoBehaviour
     IEnumerator DramaticLose()
     {
         losing = true;
+        player.GetComponent<Animator>().SetBool("ko", true);
+        player.GetComponent<SpriteRenderer>().sprite = koSprite;
         ManuallyDisableGameSystems();
         FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
         AudioSource.PlayClipAtPoint(loseSFX, Camera.main.transform.position);

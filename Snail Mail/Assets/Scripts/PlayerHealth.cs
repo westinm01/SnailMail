@@ -56,7 +56,10 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator InvincibleTime()
     {
         invincible = true;
-        yield return new WaitForSeconds(invincibleTime);
+        GetComponent<Animator>().SetBool("hurt", true);
+        yield return new WaitForSeconds(invincibleTime/2);
+        GetComponent<Animator>().SetBool("hurt", false);
+        yield return new WaitForSeconds(invincibleTime / 2);
         invincible = false;
     }
 }
