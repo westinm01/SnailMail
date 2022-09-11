@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4714469430194683311}
-  - component: {fileID: 8934504878496522355}
   m_Layer: 0
   m_Name: Bullet 5
   m_TagString: Untagged
@@ -33,18 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8934504878496522355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2313558354155146885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc36e8412a0c0942a9cb2eae08a8fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6926617728492060669
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,6 +43,7 @@ GameObject:
   - component: {fileID: 7681319290970658498}
   - component: {fileID: 4808289406344296640}
   - component: {fileID: 8965053496959107745}
+  - component: {fileID: 2639793279335468377}
   m_Layer: 0
   m_Name: B5 Body
   m_TagString: Untagged
@@ -175,3 +163,15 @@ PolygonCollider2D:
       - {x: 0.185, y: -0.33499998}
       - {x: 0.315, y: -0.21499999}
   m_UseDelaunayMesh: 0
+--- !u!114 &2639793279335468377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926617728492060669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc36e8412a0c0942a9cb2eae08a8fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

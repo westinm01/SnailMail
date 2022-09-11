@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7675892514292877985}
   - component: {fileID: 7675892514292877986}
   - component: {fileID: 7675892514292877984}
+  - component: {fileID: 335480620}
   m_Layer: 0
   m_Name: Attack Spawner (Crab)
   m_TagString: Untagged
@@ -105,4 +106,25 @@ MonoBehaviour:
   - {fileID: 7584739760709625294, guid: a04a5fa2c8513d34fa69565ce06b6088, type: 3}
   - {fileID: 1035187064444019993, guid: 8668de954eeae2c47aa37d1475d9cf35, type: 3}
   - {fileID: 3844776102248864664, guid: cfb5b8556a87eb747a2211ecfaab1a49, type: 3}
+  - {fileID: 4942159510884796711, guid: 74c8e33cc47c1e2478760f6557f699a3, type: 3}
   timeBetweenAttacks: 4
+--- !u!95 &335480620
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7675892514292877987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 386f8d2b05d76b8459f971755875bb9e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

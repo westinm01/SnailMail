@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3938660279046251302}
   - component: {fileID: 8935440507085799853}
   - component: {fileID: 7624692936199975132}
+  - component: {fileID: 8710761242135987749}
   m_Layer: 0
   m_Name: B3 Body
   m_TagString: Untagged
@@ -101,6 +102,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.35, y: 0.98}
   m_Direction: 0
+--- !u!114 &8710761242135987749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649183349618249785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc36e8412a0c0942a9cb2eae08a8fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1234109742933281944
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +123,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7929254900478340866}
-  - component: {fileID: -1434883588906466819}
   m_Layer: 0
   m_Name: Bullet 3
   m_TagString: Untagged
@@ -134,15 +146,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1434883588906466819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234109742933281944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddc36e8412a0c0942a9cb2eae08a8fb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

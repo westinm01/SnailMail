@@ -177,6 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6620be6085ada247a9fe9b3fb67870a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fullHP: {fileID: 1337867990, guid: aea3f59820dff0949b6c30bd8547dbc2, type: 3}
+  emptyHP: {fileID: -85992242, guid: aea3f59820dff0949b6c30bd8547dbc2, type: 3}
   healthIndicators:
   - {fileID: 0}
   - {fileID: 0}
