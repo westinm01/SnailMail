@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HydroPump : MonoBehaviour
+public class Attack : MonoBehaviour
 {
     public void DestroySelf()
     {
