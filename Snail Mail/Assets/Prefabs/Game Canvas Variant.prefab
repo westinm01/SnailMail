@@ -423,6 +423,7 @@ MonoBehaviour:
   winSFX: {fileID: 8300000, guid: f022d16f45e30904380562f22f1af227, type: 3}
   loseScreen: {fileID: 1965969903}
   koSprite: {fileID: 1376385989, guid: 6c5448b77e18c0a4d83bf03820c25f34, type: 3}
+  loseVFX: {fileID: 9070113690995454738, guid: b115554aa4a60074787a68e90cd034e1, type: 3}
   loseSFX: {fileID: 8300000, guid: a9fcf5e273fbcec4eaf12d9f02f654cf, type: 3}
   snatchSFX: {fileID: 8300000, guid: 79d055606d3f5fa408d852b7ff5d2cff, type: 3}
   fadeToBlack: {fileID: 1290210293}

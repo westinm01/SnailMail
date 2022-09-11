@@ -8,6 +8,10 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Sprite fullHP;
     [SerializeField] Sprite emptyHP;
 
+    [SerializeField] GameObject blockSparksVFX;
+    [SerializeField] AudioClip blockSFX;
+    [SerializeField] GameObject smokeHurtVFX;
+
     [SerializeField] GameObject[] healthIndicators;
     [SerializeField] float invincibleTime = 3f;
     int currentHealth = 3;
@@ -17,12 +21,16 @@ public class PlayerHealth : MonoBehaviour
     {
         if (invincible)
         {
+            Instantiate(blockSparksVFX, transform.position, Quaternion.identity);
+            AudioSource.PlayClipAtPoint(blockSFX, Camera.main.transform.position);
+
             FindObjectOfType<CinemachineShake>().ShakeCamera(1f, .25f, .75f);
             return;
         }
 
         // take damage
         currentHealth--;
+        Instantiate(smokeHurtVFX, transform.position, Quaternion.identity);
         FindObjectOfType<CinemachineShake>().ShakeCamera(2.5f, .25f, .75f);
 
         GetComponent<AudioSource>().Play();

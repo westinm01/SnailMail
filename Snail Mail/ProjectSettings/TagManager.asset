@@ -50,3 +50,6 @@ TagManager:
   - name: Crab
     uniqueID: 1979036507
     locked: 0
+  - name: VFX
+    uniqueID: 2008632017
+    locked: 0

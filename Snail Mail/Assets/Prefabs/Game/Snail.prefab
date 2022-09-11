@@ -37,7 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7301865975072918835
 SpriteRenderer:
@@ -179,6 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullHP: {fileID: 1337867990, guid: aea3f59820dff0949b6c30bd8547dbc2, type: 3}
   emptyHP: {fileID: -85992242, guid: aea3f59820dff0949b6c30bd8547dbc2, type: 3}
+  blockSparksVFX: {fileID: 1747416473145007196, guid: 3cb72de8d7f78e144b0e115a2ae91069, type: 3}
+  blockSFX: {fileID: 8300000, guid: feb25ad5ee86e1c45828b3227879f224, type: 3}
+  smokeHurtVFX: {fileID: 3314452616688317099, guid: 0d85d9212832d1d40a3629fe5badbd12, type: 3}
   healthIndicators:
   - {fileID: 0}
   - {fileID: 0}

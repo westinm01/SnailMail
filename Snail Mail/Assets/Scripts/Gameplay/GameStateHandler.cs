@@ -10,6 +10,7 @@ public class GameStateHandler : MonoBehaviour
     [SerializeField] AudioClip winSFX;
     [SerializeField] GameObject loseScreen;
     [SerializeField] Sprite koSprite;
+    [SerializeField] GameObject loseVFX;
     [SerializeField] AudioClip loseSFX;
     [SerializeField] AudioClip snatchSFX;
     [SerializeField] GameObject fadeToBlack;
@@ -76,6 +77,7 @@ public class GameStateHandler : MonoBehaviour
         player.GetComponent<SpriteRenderer>().sprite = koSprite;
         ManuallyDisableGameSystems();
         FindObjectOfType<CinemachineShake>().ShakeCamera(3f, 1f, dramaticPauseDelay);
+        Instantiate(loseVFX, player.transform.position, Quaternion.identity);
         AudioSource.PlayClipAtPoint(loseSFX, Camera.main.transform.position);
         fadeToRed.SetActive(true);
 
