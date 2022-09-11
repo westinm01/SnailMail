@@ -27,7 +27,6 @@ public class BulletDelays : MonoBehaviour
         {
             elapsedTime = 0f;
             bulletsToDelay[currentIndex].SetActive(true);
-            Debug.Log("set " + currentIndex + " true");
             currentIndex++;
         }
     }

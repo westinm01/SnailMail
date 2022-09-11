@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Sprite emptyHP;
 
     [SerializeField] GameObject[] healthIndicators;
+    [SerializeField] float invincibleTime = 3f;
     int currentHealth = 3;
     bool invincible = false;
 
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
             FindObjectOfType<GameStateHandler>().LoseGame();
         }
         UpdateIndicators();
+        StartCoroutine(InvincibleTime());
     }
 
     private void UpdateIndicators()
@@ -46,5 +48,12 @@ public class PlayerHealth : MonoBehaviour
     public void SetPlayerInvincible(bool value)
     {
         invincible = value;
+    }
+
+    IEnumerator InvincibleTime()
+    {
+        invincible = true;
+        yield return new WaitForSeconds(invincibleTime);
+        invincible = false;
     }
 }
