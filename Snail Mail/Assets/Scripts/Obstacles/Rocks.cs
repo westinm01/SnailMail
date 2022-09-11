@@ -10,6 +10,7 @@ public class Rocks : MonoBehaviour
         if(col.tag == "Player")
         {
             col.GetComponent<PlayerHealth>().TakeDamage();
+            
         }
     }
 }
